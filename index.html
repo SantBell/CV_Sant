@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interactivo - Santiago Soriano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio">
+        <div class="hero-content">
+            <h1>Santiago Soriano</h1>
+            <p id="typing-text">Desarrollador de Sistemas & Especialista en Automatización</p>
+            <button onclick="document.getElementById('contacto').scrollIntoView()">Contactar</button>
+        </div>
+    </header>
+
+    <section id="perfil">
+        <h2>Sobre Mí</h2>
+        <p>Especialista en el desarrollo de sistemas administrativos y gestión de registros legales, con enfoque en la automatización de procesos y seguridad digital.</p>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiencia Profesional</h2>
+        <div class="timeline">
+            <div class="event">
+                <h3>Desarrollador de Sistemas Administrativos</h3>
+                <span>2024 - Presente</span>
+                <p>Gestión y automatización de expedientes legales para múltiples centros, optimizando bases de datos relacionales.</p>
+            </div>
+            </div>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Sistema de Control de Vencimientos</h3>
+                <p>Desarrollado en Access y VBA para el seguimiento de cumplimiento legal.</p>
+            </div>
+            <div class="project-card">
+                <h3>Laboratorio de Ciberseguridad</h3>
+                <p>Implementación de entornos virtuales para análisis forense y recuperación de datos.</p>
+            </div>
+            <div class="project-card">
+                <h3>Portal Web Institucional</h3>
+                <p>Desarrollo frontend y backend para gestión de servicios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Backend & DB</h3>
+                <ul>
+                    <li>Python (Flask)</li>
+                    <li>SQL / MS Access</li>
+                    <li>VBA (Excel Automation)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5 / CSS3</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Herramientas & Otros</h3>
+                <ul>
+                    <li>Ciberseguridad Forense</li>
+                    <li>Virtualización (VirtualBox/Kali)</li>
+                    <li>.NET (C#)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="terminal-section">
+        <h2>Consola de Comandos</h2>
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">santiago@system: ~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div id="terminal-output">Escribe 'help' para ver los comandos disponibles.</div>
+                <div class="input-line">
+                    <span class="prompt">santiago@system:~$</span>
+                    <input type="text" id="terminal-input" autofocus>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <section id="contacto">
+            <h2>¿Hablamos?</h2>
+            <div class="contacto-container">
+                <form action="https://formspree.io/f/xbdqvgjj" method="POST" id="contact-form" class="contacto-form">
+                    <div class="input-group">
+                        <input type="text" name="nombre" id="nombre" required placeholder=" ">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" required placeholder=" ">
+                        <label for="email">Correo Electrónico</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea name="mensaje" id="mensaje" required placeholder=" " rows="5"></textarea>
+                        <label for="mensaje">Tu mensaje</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+                <div class="contacto-info">
+                    <h3>Conéctate conmigo</h3>
+                    <p>Disponible para proyectos de sistemas, auditorías de seguridad o consultoría técnica.</p>
+                    <div class="social-icons">
+                        <a href="#" class="icon">LinkedIn</a>
+                        <a href="#" class="icon">GitHub</a>
+                        <a href="#" class="icon">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
