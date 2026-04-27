@@ -120,7 +120,8 @@ async function handleSubmit(event) {
   status.innerText = "Enviando...";
 
   fetch(event.target.action, {
-    method: form.method,
+    /* method: form.method, */
+    method: 'POST',
     body: data,
     headers: {
         'Accept': 'application/json'
