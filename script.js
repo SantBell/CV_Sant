@@ -110,18 +110,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const form = document.getElementById("contact-form");
+/* const form = document.getElementById("contact-form");
 
 async function handleSubmit(event) {
-  event.preventDefault(); // Evita que la página salte al enviar
+  event.preventDefault(); 
   const status = document.querySelector(".btn-enviar");
   const data = new FormData(event.target);
 
   status.innerText = "Enviando...";
 
   fetch(event.target.action, {
-    /* method: form.method, */
-    method: 'POST',
+    method: form.method,
     body: data,
     headers: {
         'Accept': 'application/json'
@@ -129,7 +128,7 @@ async function handleSubmit(event) {
   }).then(response => {
     if (response.ok) {
       status.innerText = "¡Mensaje Enviado!";
-      status.style.backgroundColor = "#27c93f"; // Cambia a verde éxito
+      status.style.backgroundColor = "#27c93f";
       form.reset();
     } else {
       response.json().then(data => {
@@ -145,4 +144,35 @@ async function handleSubmit(event) {
   });
 }
 
+form.addEventListener("submit", handleSubmit); */
+
+/* javascript */
+const form = document.getElementById("contact-form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    const status = document.querySelector(".btn-enviar");
+    const data = new FormData(event.target);
+
+    status.innerText = "Enviando...";
+
+    fetch(event.target.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            status.innerText = "¡Enviado con éxito!";
+            status.style.backgroundColor = "#27c93f";
+            form.reset();
+        } else {
+            status.innerText = "Error en el envío";
+            status.style.backgroundColor = "#ff5f56";
+        }
+    }).catch(error => {
+        status.innerText = "Error de red";
+    });
+}
 form.addEventListener("submit", handleSubmit);
